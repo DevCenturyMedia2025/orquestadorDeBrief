@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carga de Brief</title>
+
+  <!-- 1) PDF.js (ESM) — deja disponible window.pdfjsLib -->
+  <script type="module">
+    import * as pdfjsLib from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/build/pdf.mjs';
+    window.pdfjsLib = pdfjsLib;
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.8.69/build/pdf.worker.mjs';
+  </script>
+  <!-- 2) Mammoth (DOCX) — expone window.mammoth -->
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js" defer></script>
+
+  <!-- 3) Tu extractor (define window.detectarExtension y window.extraerTextoArchivo) -->
+  <script src="./js/extraer.js" defer></script>
+
+  <!-- 4) Cliente de la API (enviar al backend) -->
+  <script src="./js/api-client/validador.client.js" defer></script>
+
+  <!-- 5) Tu lógica actual (usa las funciones anteriores) -->
+  <script src="./js/carga.js" defer></script>
+</head>
+<body>
+  <h1>Carga de Brief</h1>
+  <p>Ingrese el nombre del Brief:</p>
+  <input type="text" id="nombre" placeholder="Nombre del Brief">
+
+  <!-- Evita .doc: no se soporta en navegador -->
+  <input type="file" id="archivo" accept=".pdf,.docx,.txt">
+
+  <button id="btnCargar" type="button">Cargar</button>
+</body>
+</html>
