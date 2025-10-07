@@ -55,4 +55,5 @@
     if (ext === '.docx') return await extraerDOCX(file);
     if (ext === '.txt')  return await extraerTXT(file);
   };
+  
 })();

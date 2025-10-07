@@ -23,6 +23,12 @@
 
   <!-- 5) Tu lógica actual (usa las funciones anteriores) -->
   <script src="./js/carga.js" defer></script>
+  <!-- jsPDF para crear PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- docx para generar .docx -->
+  <script src="https://unpkg.com/docx@8.3.1/build/index.umd.js"></script>
+
 </head>
 <body>
   <h1>Carga de Brief</h1>
@@ -33,5 +39,8 @@
   <input type="file" id="archivo" accept=".pdf,.docx,.txt">
 
   <button id="btnCargar" type="button">Cargar</button>
+  <button id="btnDescargarPDF" type="button">Descargar como PDF</button>
+  <button id="btnDescargarDOCX" type="button">Descargar como DOCX</button>
+
 </body>
 </html>
