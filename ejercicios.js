@@ -67,41 +67,45 @@ function summary() {
 // -----------------------------------------------------------------------------
 
 /** 1) suma(a, b): retorna la suma de a y b */
+let a = 0;
+let b = 0;
 function suma(a, b) {
-  operacion = a + b;
+ let operacion = a + b;
   return operacion;
 }
 
 /** 2) resta(a, b): retorna a - b */
 function resta(a, b) {
-  operacion = a - b;
+  let operacion = a - b;
   return operacion;
   
 }
 
 /** 3) areaRect(w, h): área de un rectángulo (w * h) */
 function areaRect(w, h) {
-  operacion = w * h;
+  let operacion = w * h;
   return operacion;
   
 }
 
 /** 4) esPar(n): true si n es par, false si no (usa % y ===) */
 function esPar(n) {
-  operacion = n % 2 === 0;
+  let operacion = n % 2 === 0;
   return operacion;
 }
 
 /** 5) max(a, b): mayor entre a y b (puedes usar ternario) */
 function max(a, b) {
-  operacion = a >= b ? a : b;
+  let operacion = a >= b ? a : b;
   return operacion;
 }
 
 /** 6) precioConDescuento(precio, pct): aplica descuento pct (0..100) */
+let precio = 0;
+let pct = 0;
 function precioConDescuento(precio, pct) {
-  operacion = precio * (pct/100);
-  result = precio - operacion;
+  let operacion = precio * (pct/100);
+  let result = precio - operacion;
 
   return result;
 }
@@ -187,7 +191,7 @@ function calificar(nota) {
 /** 17) sumaArray(arr): suma todos los números del array */
 function sumaArray(arr) {
   // TODO: reduce o bucle for
-  return undefined;
+
 }
 
 /** 18) maxArray(arr): máximo del array (asume al menos un elemento) */
